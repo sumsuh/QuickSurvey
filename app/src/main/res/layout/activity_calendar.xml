@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_header_selector"
+    tools:context=".calendar">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_transparent"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:layout_alignParentBottom="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_url="https://assets6.lottiefiles.com/temporary_files/PH5YkW.json" />
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="150dp"
+
+
+        android:layout_alignParentTop="true"
+
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:compactCalendarBackgroundColor="@android:color/transparent"
+        app:compactCalendarCurrentDayBackgroundColor="#A1FFC107"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#FFBA00"
+        app:compactCalendarCurrentSelectedDayTextColor="@color/colorPrimaryDark"
+        app:compactCalendarMultiEventIndicatorColor="#FFE600"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextColor="#FFFFFF"
+        app:compactCalendarTextSize="12sp" />
+
+</RelativeLayout>

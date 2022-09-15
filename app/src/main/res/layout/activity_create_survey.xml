@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createSurvey"
+    android:background="@drawable/main_header_selector">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_transparent"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/Theme.AppCompat.Light" />
+
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="389dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/toolbar"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/rounded_edges2"
+        android:ems="10"
+        android:hint="@string/enter_question"
+        android:inputType="textMultiLine"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/button"
+        android:onClick="addQuestion"
+        android:text="@string/add_another_question"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button3"
+        style="submit"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button2"
+        android:onClick="submit"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/question"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:divider="@drawable/divider"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:showDividers="middle">
+
+        <EditText
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/rounded_edges2"
+            android:ems="10"
+
+            android:hint="Option A"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/rounded_edges2"
+            android:ems="10"
+
+            android:hint="@string/option_b"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/rounded_edges2"
+            android:ems="10"
+
+            android:hint="@string/option_c"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@drawable/rounded_edges2"
+            android:ems="10"
+            android:hint="@string/option_d"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+</RelativeLayout>
